@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Layout from "../components/layout";
 
 const USCISNaturalizationTest_Easy = () => {
   const questions = [
@@ -164,32 +165,36 @@ const USCISNaturalizationTest_Easy = () => {
 
   return (
     <>
-      <h1>USCIS Naturalization Test - Easy</h1>
-      {showScore ? (
-        <div className="container_score">
-          You scored {score} out of {questions.length}
-        </div>
-      ) : (
-        <>
-          <div className="container_questions">
-            <h2 className="question-count">
-              <span>Question {currentQuestion + 1}</span>/{questions.length}
-            </h2>
-            <div className="question-text">
-              {questions[currentQuestion].questionText}
+      <Layout>
+        <h1>USCIS Naturalization Test - Easy</h1>
+        {showScore ? (
+          <div className="container_score">
+            You scored {score} out of {questions.length}
+          </div>
+        ) : (
+          <>
+            <div className="container_questions">
+              <h2 className="question-count">
+                <span>Question {currentQuestion + 1}</span>/{questions.length}
+              </h2>
+              <div className="question-text">
+                {questions[currentQuestion].questionText}
+              </div>
             </div>
-          </div>
-          <div className="section_choices">
-            {questions[currentQuestion].answerOptions.map((answerOption) => (
-              <button
-                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
-              >
-                {answerOption.answerText}
-              </button>
-            ))}
-          </div>
-        </>
-      )}
+            <div className="section_choices">
+              {questions[currentQuestion].answerOptions.map((answerOption) => (
+                <button
+                  onClick={() =>
+                    handleAnswerOptionClick(answerOption.isCorrect)
+                  }
+                >
+                  {answerOption.answerText}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
+      </Layout>
     </>
   );
 };
