@@ -10,7 +10,9 @@ const Home = () => {
       <h1>America the Beautiful</h1>
       <h2>Interesting Fact about America</h2>
       <p>{interestingFact}</p>
-      <Link to="/naturalization-test_easy">Take the (Easy) Test!</Link>
+      <Link to="/test-landing-page">
+        So you think you know America? Then prove it!
+      </Link>
     </>
   );
 };

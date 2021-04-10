@@ -164,35 +164,32 @@ const USCISNaturalizationTest_Easy = () => {
 
   return (
     <>
-      <div className="layout">
-        {showScore ? (
-          <div className="container_score">
-            You scored {score} out of {questions.length}
+      <h1>USCIS Naturalization Test - Easy</h1>
+      {showScore ? (
+        <div className="container_score">
+          You scored {score} out of {questions.length}
+        </div>
+      ) : (
+        <>
+          <div className="container_questions">
+            <h2 className="question-count">
+              <span>Question {currentQuestion + 1}</span>/{questions.length}
+            </h2>
+            <div className="question-text">
+              {questions[currentQuestion].questionText}
+            </div>
           </div>
-        ) : (
-          <>
-            <div className="container_questions">
-              <h2 className="question-count">
-                <span>Question {currentQuestion + 1}</span>/{questions.length}
-              </h2>
-              <div className="question-text">
-                {questions[currentQuestion].questionText}
-              </div>
-            </div>
-            <div className="section_choices">
-              {questions[currentQuestion].answerOptions.map((answerOption) => (
-                <button
-                  onClick={() =>
-                    handleAnswerOptionClick(answerOption.isCorrect)
-                  }
-                >
-                  {answerOption.answerText}
-                </button>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
+          <div className="section_choices">
+            {questions[currentQuestion].answerOptions.map((answerOption) => (
+              <button
+                onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}
+              >
+                {answerOption.answerText}
+              </button>
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 };
