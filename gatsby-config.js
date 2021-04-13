@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "the-constitution-quiz",
+    title: "America the Beautiful",
+    description: "The most patriotic, non-partisan web app ever.",
   },
   plugins: [
     "gatsby-plugin-sass",

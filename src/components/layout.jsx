@@ -1,8 +1,14 @@
 import React from "react";
 import "../styles/main.scss";
+import Navigation from "./navigation";
 
 const Layout = (props) => {
-  return <div className="layout">{props.children}</div>;
+  return (
+    <>
+      <Navigation />
+      <div className="layout">{props.children}</div>
+    </>
+  );
 };
 
 export default Layout;
