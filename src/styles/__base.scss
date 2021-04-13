@@ -1,0 +1,17 @@
+@import "./_colors";
+
+h1,
+h2,
+p,
+Link,
+a {
+  color: $base-font-color;
+}
+
+.image {
+  &_gif {
+    height: 20rem;
+    width: auto;
+    margin: 0.5rem 0;
+  }
+}

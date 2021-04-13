@@ -16,7 +16,7 @@ const Home = () => {
           <p>{interestingFact}</p>
           <p>
             So you think you know America?&nbsp;
-            <Link to="/tests" component={Tests}>
+            <Link className="link" to="/tests" component={Tests}>
               Then prove it!
             </Link>
           </p>

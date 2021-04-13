@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import PageNotFound from "../pages/404";
 import Tests from "../pages/tests";
 import Home from "../pages";
+import ComingSoon from "../pages/coming-soon";
 
 const Navigation = () => {
   const [sansToggle, withToggle] = useState(true);
@@ -29,11 +29,7 @@ const Navigation = () => {
             <Link className="link_navbar" to="/" component={Home}>
               Home
             </Link>
-            <Link
-              className="link_navbar"
-              to="/constitution"
-              component={PageNotFound}
-            >
+            <Link className="link_navbar" to="/coming-soon">
               Constitution
             </Link>
             <Link className="link_navbar" to="/tests" component={Tests}>
