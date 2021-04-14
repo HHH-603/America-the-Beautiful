@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import React, { useState } from "react";
 import Layout from "../components/layout";
 
@@ -167,25 +168,22 @@ const NaturalizationTest_Easy = () => {
     <>
       <Layout>
         <div className="container">
-          <h1>USCIS Naturalization Test - Easy</h1>
-          {showScore ? (
-            <div className="container_score">
-              You scored {score} out of {questions.length}
-            </div>
-          ) : (
-            <>
-              <div className="container_questions">
-                <h2 className="question-count">
-                  <span>Question {currentQuestion + 1}</span>/{questions.length}
+          <div className="container">
+            <h1>USCIS Naturalization Test - Easy</h1>
+            {showScore ? (
+              <p>
+                You scored {score} out of {questions.length}.
+              </p>
+            ) : (
+              <>
+                <h2>
+                  Question {currentQuestion + 1}/{questions.length}
                 </h2>
-                <div className="question-text">
-                  {questions[currentQuestion].questionText}
-                </div>
-              </div>
-              <div className="section_choices">
+                <p>{questions[currentQuestion].questionText}</p>
                 {questions[currentQuestion].answerOptions.map(
                   (answerOption) => (
                     <button
+                      className="button"
                       onClick={() =>
                         handleAnswerOptionClick(answerOption.isCorrect)
                       }
@@ -194,9 +192,9 @@ const NaturalizationTest_Easy = () => {
                     </button>
                   )
                 )}
-              </div>
-            </>
-          )}
+              </>
+            )}
+          </div>
         </div>
       </Layout>
     </>

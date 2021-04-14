@@ -1,5 +1,5 @@
 @import "./_colors";
-
+@import "./_layout";
 $base-transition: 200ms;
 $base-transition-and-effect: 100ms ease-in;
 $secondary-transition-and-effect: 200ms ease-in-out;
@@ -10,6 +10,25 @@ $secondary-transition-and-effect: 200ms ease-in-out;
   justify-content: center;
   max-width: 100vw;
   margin: 1rem 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  width: $base-container-width;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid $base-font-color;
+  transition: all $base-transition-and-effect;
+}
+
+.button:hover {
+  background-color: $base-font-color;
+  color: $base-background-color;
 }
 
 .link {

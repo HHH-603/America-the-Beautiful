@@ -1,5 +1,7 @@
 @import "./_colors";
 
+$base-container-width: 60rem;
+
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +20,10 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-flow: column wrap;
   height: auto;
+  max-width: $base-container-width;
   margin: 1rem auto;
   padding: 1rem;
 

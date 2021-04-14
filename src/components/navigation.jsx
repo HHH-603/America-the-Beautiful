@@ -29,7 +29,11 @@ const Navigation = () => {
             <Link className="link_navbar" to="/" component={Home}>
               Home
             </Link>
-            <Link className="link_navbar" to="/coming-soon">
+            <Link
+              className="link_navbar"
+              to="/coming-soon"
+              component={ComingSoon}
+            >
               Constitution
             </Link>
             <Link className="link_navbar" to="/tests" component={Tests}>

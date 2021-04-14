@@ -3,9 +3,15 @@
 h1,
 h2,
 p,
+Button,
 Link,
 a {
   color: $base-font-color;
+}
+
+h1,
+h2 {
+  text-align: center;
 }
 
 .image {
