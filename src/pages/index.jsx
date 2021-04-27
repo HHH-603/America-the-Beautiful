@@ -13,7 +13,13 @@ const Home = () => {
         <div className="container">
           <h1>America the Beautiful</h1>
           <h2>Interesting Fact about America</h2>
-          <p>{interestingFact}</p>
+          <p
+            style={{
+              fontStyle: "italic",
+            }}
+          >
+            "{interestingFact}"
+          </p>
           <p>
             So you think you know America?&nbsp;
             <Link className="link" to="/tests" component={Tests}>
