@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: "America the Beautiful",
     description: "The most patriotic, non-partisan web app ever.",
+    author: "Hank Holmes",
+    siteUrl: "https://americathebeautiful.gatsbyjs.io/",
   },
   plugins: [
     "gatsby-plugin-sass",
