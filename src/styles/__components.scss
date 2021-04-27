@@ -19,7 +19,7 @@ $secondary-transition-and-effect: 200ms ease-in-out;
   text-decoration: none;
   outline: none;
   text-align: center;
-  width: $base-container-width;
+  width: $base-container-width - 20rem;
   margin: 0.5rem;
   padding: 0.5rem;
   border: 1px solid $base-font-color;
@@ -49,7 +49,7 @@ $secondary-transition-and-effect: 200ms ease-in-out;
     &-header {
       text-decoration: none;
       font-family: "Lobster";
-      font-size: 2rem;
+      font-size: 3rem;
       color: $base-font-color;
       text-align: center;
       margin-left: 1rem;
