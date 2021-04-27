@@ -33,6 +33,7 @@ $secondary-transition-and-effect: 200ms ease-in-out;
 
 .link {
   text-decoration: none;
+  border-bottom: 1px $base-font-color dashed;
   color: $base-font-color;
   background: linear-gradient($base-font-color 0 0) 0% calc(-1px - 100%) /
     var(--d, 0%) 200% no-repeat;

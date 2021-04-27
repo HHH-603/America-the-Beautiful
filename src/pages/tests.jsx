@@ -13,6 +13,7 @@ const Tests = () => {
           <p>
             Would you like to test your knowledge of{" "}
             <Link
+              className="link"
               to="/naturalization-test_easy"
               component={NaturalizationTest_Easy}
             >
@@ -22,7 +23,7 @@ const Tests = () => {
           </p>
           <p>
             Or would you prefer to focus on the history of{" "}
-            <Link to="/coming-soon" component={ComingSoon}>
+            <Link className="link" to="/coming-soon" component={ComingSoon}>
               a particular State
             </Link>
             ?
