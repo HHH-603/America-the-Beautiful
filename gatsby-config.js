@@ -5,6 +5,9 @@ module.exports = {
     author: "Hank Holmes",
     siteUrl: "https://americathebeautiful.gatsbyjs.io/",
   },
+  flags: {
+    FAST_DEV: true,
+  },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-gatsby-cloud",

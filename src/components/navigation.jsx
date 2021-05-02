@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import Tests from "../pages/tests";
-import Home from "../pages";
+import { Tests, Home, Constitution } from "../pages";
 import ComingSoon from "../pages/coming-soon";
 
 const Navigation = () => {
@@ -31,8 +30,8 @@ const Navigation = () => {
             </Link>
             <Link
               className="link_navbar"
-              to="/coming-soon"
-              component={ComingSoon}
+              to="/constitution"
+              component={Constitution}
             >
               Constitution
             </Link>
@@ -59,13 +58,13 @@ const Navigation = () => {
         }
       >
         <Link className="link_drop-down" to="/about">
-          About
+          Home
         </Link>
         <Link className="link_drop-down" to="/projects">
-          Projects
+          Constitution
         </Link>
         <Link className="link_drop-down" to="/contact">
-          Contact
+          Tests
         </Link>
       </div>
     </>
