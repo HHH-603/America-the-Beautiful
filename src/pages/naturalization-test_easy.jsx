@@ -5,6 +5,7 @@ const NaturalizationTest_Easy = () => {
   const questions = [
     {
       questionText: "What is the supreme law of the land?",
+      correctAnswer: "The Constitution",
       answerOptions: [
         { answerText: "The Declaration of Indepencence", isCorrect: false },
         { answerText: "The Magna Carta", isCorrect: false },
@@ -13,6 +14,8 @@ const NaturalizationTest_Easy = () => {
     },
     {
       questionText: "What does the Constitution do?",
+      correctAnswer:
+        "Sets up the government, defines the government, and protects the basic rights of Americans.",
       answerOptions: [
         {
           answerText:
@@ -34,6 +37,7 @@ const NaturalizationTest_Easy = () => {
     {
       questionText:
         "The idea of self-government is in the first three words of the Constitution. What are these words?",
+      correctAnswer: "We the People",
       answerOptions: [
         { answerText: "All for One", isCorrect: false },
         { answerText: "We the People", isCorrect: true },
@@ -42,6 +46,7 @@ const NaturalizationTest_Easy = () => {
     },
     {
       questionText: "What is an amendment?",
+      correctAnswer: "A change or addition to the Constitution.",
       answerOptions: [
         {
           answerText:
@@ -62,6 +67,7 @@ const NaturalizationTest_Easy = () => {
     {
       questionText:
         "What do we call the first ten amendments to the Constitution?",
+      correctAnswer: "The Bill of Rights",
       answerOptions: [
         { answerText: "The Bill of Rights", isCorrect: true },
         { answerText: "The Rights of Man", isCorrect: false },
@@ -70,6 +76,8 @@ const NaturalizationTest_Easy = () => {
     },
     {
       questionText: "Which of the following is the First Amendment?",
+      correctAnswer:
+        "Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.",
       answerOptions: [
         {
           answerText:
@@ -90,6 +98,7 @@ const NaturalizationTest_Easy = () => {
     },
     {
       questionText: "How many amendments does the Constitution have?",
+      correctAnswer: "27",
       answerOptions: [
         { answerText: "27", isCorrect: true },
         { answerText: "10", isCorrect: false },
@@ -98,6 +107,7 @@ const NaturalizationTest_Easy = () => {
     },
     {
       questionText: "What did the Declaration of Independence do?",
+      correctAnswer: "Announced our indepence from Great Britain.",
       answerOptions: [
         {
           answerText:
@@ -116,6 +126,7 @@ const NaturalizationTest_Easy = () => {
     },
     {
       questionText: "What are two rights in the Declaration of Independence",
+      correctAnswer: "Life and Liberty.",
       answerOptions: [
         {
           answerText: "A universal, basic income and guaranteed employment.",
@@ -127,6 +138,7 @@ const NaturalizationTest_Easy = () => {
     },
     {
       questionText: "What is freedom of religion?",
+      correctAnswer: "The right to, or not to, practice any religion.",
       answerOptions: [
         {
           answerText:
@@ -149,7 +161,6 @@ const NaturalizationTest_Easy = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
-  const [answer, hiddenAnswer] = useState(false);
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -171,17 +182,32 @@ const NaturalizationTest_Easy = () => {
           <div className="container">
             <h1>USCIS Naturalization Test - Easy</h1>
             {showScore ? (
-              <p>
-                You scored {score} out of {questions.length}.&nbsp;
-                <span
-                  className="link"
-                  onClick={() => {
-                    window.location.reload();
-                  }}
-                >
-                  Take the test again?
-                </span>
-              </p>
+              <>
+                <p>
+                  You scored {score} out of {questions.length}.&nbsp;
+                  <span
+                    className="link"
+                    onClick={() => {
+                      window.location.reload();
+                    }}
+                  >
+                    Take the test again
+                  </span>
+                  ?
+                </p>
+                <div className="container_correct-answers">
+                  {questions.map((question) => (
+                    <div>
+                      <p className="paragraph_quiz-question">
+                        Q: {question.questionText}
+                      </p>
+                      <p className="paragraph_correct-answer">
+                        A: {question.correctAnswer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </>
             ) : (
               <>
                 <h2>

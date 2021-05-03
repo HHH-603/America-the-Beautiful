@@ -61,6 +61,7 @@ $base-transition-and-effect: 100ms ease-in;
 
     &-header {
       background-color: transparent;
+      text-shadow: 2px 2px $usa-red;
       color: $usa-blue;
       text-decoration: none;
       font-family: "Lobster";
@@ -68,10 +69,6 @@ $base-transition-and-effect: 100ms ease-in;
       text-align: center;
       margin-left: 1rem;
       transition: $base-transition;
-    }
-
-    &-header:hover {
-      color: $usa-red;
     }
   }
 
