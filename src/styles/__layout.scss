@@ -8,7 +8,9 @@ $base-container-border-radius: 0.1rem;
 
 $base-paragraph-margins: 0.25rem 0;
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,30 +21,31 @@ $base-paragraph-margins: 0.25rem 0;
   display: flex;
   justify-content: center;
   flex-flow: column wrap;
-  height: auto;
-  width: $secondary-container-width;
+  min-height: 100vh;
 }
 
 .container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   flex-flow: column wrap;
+  flex-grow: 1;
   height: auto;
   max-width: $base-container-width;
-  margin: 1rem auto;
-  padding: 1rem;
+  margin-top: 0;
+  margin: 0 auto;
 
   &_navigation {
     background-color: $usa-white;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: $secondary-container-width;
-    margin-top: 0;
+    height: 4.5rem;
+    width: $secondary-container-width;
     margin-bottom: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem;
   }
 
   &_navbar-header {

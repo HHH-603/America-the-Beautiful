@@ -16,7 +16,7 @@ const Navigation = () => {
   }
 
   return (
-    <div className="container_navigation">
+    <>
       <nav className="navigation">
         <div className="container_navbar-header">
           <Link className="link_navbar-header" to="/">
@@ -67,7 +67,7 @@ const Navigation = () => {
           Tests
         </Link>
       </div>
-    </div>
+    </>
   );
 };
 

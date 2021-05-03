@@ -27,7 +27,8 @@ h2 {
 }
 
 h3,
-h4 {
+h4,
+h5 {
   text-align: left;
   text-transform: uppercase;
   width: $secondary-container-width;
@@ -38,7 +39,7 @@ a {
 }
 
 footer {
-  position: fixed;
+  // position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;

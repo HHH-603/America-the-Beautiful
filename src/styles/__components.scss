@@ -8,8 +8,12 @@ $base-transition-and-effect: 100ms ease-in;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 95%;
-  margin: 1rem 0;
+  height: 4.5rem;
+  width: $secondary-container-width;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1rem;
 }
 
 .paragraph {

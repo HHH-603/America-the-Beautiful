@@ -7,9 +7,11 @@ import "@fontsource/lobster";
 const Layout = (props) => {
   return (
     <>
-      <Navigation />
-      <div className="layout">{props.children}</div>
-      <Footer />
+      <div className="layout">
+        <Navigation />
+        {props.children}
+        <Footer />
+      </div>
     </>
   );
 };
