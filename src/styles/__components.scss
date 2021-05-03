@@ -4,7 +4,7 @@ $base-transition: 100ms;
 $base-transition-and-effect: 100ms ease-in;
 
 .navigation {
-  background-color: $usa-white;
+  background-color: $usa-blue;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,28 +33,28 @@ $base-transition-and-effect: 100ms ease-in;
   width: $base-container-width - 20rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  border: 1px solid $usa-white;
+  border: 1px solid $usa-blue;
   transition: all $base-transition-and-effect;
 }
 
 .button:hover {
-  background-color: $usa-white;
-  color: $usa-blue;
+  background-color: $usa-blue;
+  color: $usa-white;
 }
 
 .link {
   text-decoration: none;
-  border-bottom: 1px $usa-white dashed;
-  color: $usa-white;
-  background: linear-gradient($usa-white 0 0) 0% calc(-1px - 100%) /
-    var(--d, 0%) 200% no-repeat;
+  border-bottom: 1px $usa-blue dashed;
+  color: $usa-blue;
+  background: linear-gradient($usa-blue 0 0) 0% calc(-1px - 100%) / var(--d, 0%)
+    200% no-repeat;
   transition: $base-transition,
     background-size $base-transition $base-transition;
 
   &_navbar {
     background-color: transparent;
     text-decoration: none;
-    color: $usa-blue;
+    color: $usa-white;
     position: relative;
     margin: 0 0.5rem;
     transition: $base-transition;
@@ -62,7 +62,7 @@ $base-transition-and-effect: 100ms ease-in;
     &-header {
       background-color: transparent;
       text-shadow: 2px 2px $usa-red;
-      color: $usa-blue;
+      color: $usa-white;
       text-decoration: none;
       font-family: "Lobster";
       font-size: 3rem;
@@ -85,7 +85,7 @@ $base-transition-and-effect: 100ms ease-in;
   --d: 100%;
   cursor: pointer;
   background-position: 50% 0%;
-  color: $usa-blue;
+  color: $usa-white;
   transition: $base-transition,
     background-position $base-transition $base-transition,
     color $base-transition $base-transition;

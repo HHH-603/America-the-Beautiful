@@ -14,7 +14,7 @@ $base-paragraph-margins: 0.25rem 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: $usa-blue;
+  background-color: $usa-white;
 }
 
 .layout {
@@ -36,7 +36,7 @@ $base-paragraph-margins: 0.25rem 0;
   margin: 0 auto;
 
   &_navigation {
-    background-color: $usa-white;
+    background-color: $usa-blue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,7 +73,7 @@ $base-paragraph-margins: 0.25rem 0;
   }
 
   &_menu-icon {
-    background-color: $usa-white;
+    background-color: $usa-blue;
     display: none;
     align-items: center;
     justify-content: center;

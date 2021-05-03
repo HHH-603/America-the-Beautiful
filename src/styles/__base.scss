@@ -14,7 +14,7 @@ p,
 Button,
 Link,
 a {
-  color: $usa-white;
+  color: $usa-blue;
 }
 
 h1 {
@@ -47,8 +47,8 @@ footer {
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  background: $usa-blue;
-  border-top: 1px solid $usa-blue;
+  background: $usa-white;
+  border-top: 1px solid $usa-white;
   right: 0;
   bottom: 0;
   left: 0;
