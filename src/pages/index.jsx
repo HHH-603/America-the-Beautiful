@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import _ from "lodash";
-import InterestingFacts from "./interesting-facts.json";
+import InterestingFacts from "../content/interesting-facts.json";
 import Layout from "../components/layout";
 import Tests from "./tests";
 
@@ -23,8 +23,9 @@ const Home = () => {
           <p>
             So you think you know America?&nbsp;
             <Link className="link" to="/tests" component={Tests}>
-              Then prove it!
+              Then prove it
             </Link>
+            !
           </p>
         </div>
       </Layout>

@@ -1,15 +1,22 @@
 @import "./_colors";
 @import "./_layout";
-$base-transition: 200ms;
+$base-transition: 100ms;
 $base-transition-and-effect: 100ms ease-in;
-$secondary-transition-and-effect: 200ms ease-in-out;
 
 .navigation {
+  background-color: $usa-white;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 100vw;
+  width: 95%;
   margin: 1rem 0;
+}
+
+.paragraph {
+  &_constitution {
+    width: $secondary-container-width;
+    margin: $base-paragraph-margins;
+  }
 }
 
 .button {
@@ -22,37 +29,45 @@ $secondary-transition-and-effect: 200ms ease-in-out;
   width: $base-container-width - 20rem;
   margin: 0.5rem;
   padding: 0.5rem;
-  border: 1px solid $base-font-color;
+  border: 1px solid $usa-white;
   transition: all $base-transition-and-effect;
 }
 
 .button:hover {
-  background-color: $base-font-color;
-  color: $base-background-color;
+  background-color: $usa-white;
+  color: $usa-blue;
 }
 
 .link {
   text-decoration: none;
-  border-bottom: 1px $base-font-color dashed;
-  color: $base-font-color;
-  background: linear-gradient($base-font-color 0 0) 0% calc(-1px - 100%) /
+  border-bottom: 1px $usa-white dashed;
+  color: $usa-white;
+  background: linear-gradient($usa-white 0 0) 0% calc(-1px - 100%) /
     var(--d, 0%) 200% no-repeat;
   transition: $base-transition,
     background-size $base-transition $base-transition;
 
   &_navbar {
+    background-color: transparent;
     text-decoration: none;
-    color: $base-font-color;
+    color: $usa-blue;
     position: relative;
     margin: 0 0.5rem;
+    transition: $base-transition;
 
     &-header {
+      background-color: transparent;
+      color: $usa-blue;
       text-decoration: none;
       font-family: "Lobster";
       font-size: 3rem;
-      color: $base-font-color;
       text-align: center;
       margin-left: 1rem;
+      transition: $base-transition;
+    }
+
+    &-header:hover {
+      color: $usa-red;
     }
   }
 
@@ -60,29 +75,15 @@ $secondary-transition-and-effect: 200ms ease-in-out;
     margin-right: 1rem;
   }
 
-  &_navbar:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: $base-font-color;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: $secondary-transition-and-effect;
-  }
-
-  &_navbar:hover:before {
-    visibility: visible;
-    transform: scaleX(1);
+  &_navbar:hover {
+    color: $usa-red;
   }
 }
 
 .link:hover {
   --d: 100%;
   background-position: 50% 0%;
-  color: $base-background-color;
+  color: $usa-blue;
   transition: $base-transition,
     background-position $base-transition $base-transition,
     color $base-transition $base-transition;

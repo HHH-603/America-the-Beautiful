@@ -1,12 +1,18 @@
 @import "./_colors";
 
 $base-container-width: 60rem;
+$secondary-container-width: 100%;
+$tertiary-container-width: 50%;
+
+$base-container-border-radius: 0.1rem;
+
+$base-paragraph-margins: 0.25rem 0;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: $base-background-color;
+  background-color: $usa-blue;
 }
 
 .layout {
@@ -14,7 +20,7 @@ $base-container-width: 60rem;
   justify-content: center;
   flex-flow: column wrap;
   height: auto;
-  width: 100%;
+  width: $secondary-container-width;
 }
 
 .container {
@@ -27,28 +33,44 @@ $base-container-width: 60rem;
   margin: 1rem auto;
   padding: 1rem;
 
+  &_navigation {
+    background-color: $usa-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: $secondary-container-width;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &_navbar-header {
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 50%;
+    width: $tertiary-container-width;
   }
 
   &_navbar {
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 50%;
 
     &--links {
+      background-color: transparent;
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 50%;
+      width: $tertiary-container-width;
     }
   }
 
   &_menu-icon {
+    background-color: $usa-white;
     display: none;
     align-items: center;
     justify-content: center;
