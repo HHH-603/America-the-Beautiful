@@ -86,6 +86,7 @@ $base-transition-and-effect: 100ms ease-in;
 
 .link:hover {
   --d: 100%;
+  cursor: pointer;
   background-position: 50% 0%;
   color: $usa-blue;
   transition: $base-transition,

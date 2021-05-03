@@ -150,6 +150,7 @@ const NaturalizationTest_Easy = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [score, setScore] = useState(0);
+  const [answer, hiddenAnswer] = useState(false);
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -172,7 +173,15 @@ const NaturalizationTest_Easy = () => {
             <h1>USCIS Naturalization Test - Easy</h1>
             {showScore ? (
               <p>
-                You scored {score} out of {questions.length}.
+                You scored {score} out of {questions.length}.&nbsp;
+                <span
+                  className="link"
+                  onClick={() => {
+                    window.location.reload();
+                  }}
+                >
+                  Take the test again?
+                </span>
               </p>
             ) : (
               <>
