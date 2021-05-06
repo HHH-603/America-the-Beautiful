@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import _ from "lodash";
 import InterestingFacts from "../content/interesting-facts.json";
@@ -6,7 +6,15 @@ import Layout from "../components/layout";
 import Tests from "./tests";
 
 const Home = () => {
-  const interestingFact = _.sample(InterestingFacts);
+  const [quote, setQuote] = useState(_.sample(InterestingFacts));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setQuote(_.sample(InterestingFacts));
+    }, 6000);
+    return () => clearInterval(interval);
+  });
+
   return (
     <>
       <Layout>
@@ -18,7 +26,7 @@ const Home = () => {
               fontStyle: "italic",
             }}
           >
-            "{interestingFact}"
+            "{quote}"
           </p>
           <p>
             So you think you know America?&nbsp;
