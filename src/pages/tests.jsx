@@ -2,7 +2,7 @@ import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
 import ComingSoon from "./coming-soon";
-import NaturalizationTest_Easy from "./naturalization-test_easy";
+import TestsAmericanCivics from "./tests_american-civics";
 
 const Tests = () => {
   return (
@@ -14,8 +14,8 @@ const Tests = () => {
             Would you like to test your knowledge of{" "}
             <Link
               className="link"
-              to="/naturalization-test_easy"
-              component={NaturalizationTest_Easy}
+              to="/tests_american-civics"
+              component={TestsAmericanCivics}
             >
               American civics
             </Link>
